@@ -6,8 +6,8 @@ require (
 	k8s.io/api v0.0.0-20190808180749-077ce48e77da
 	k8s.io/apimachinery v0.0.0-20190808180622-ac5d3b819fc6
 	k8s.io/client-go v0.0.0-20190808180953-396a06da3bd7
-	k8s.io/code-generator v0.0.0-20190808180452-d0071a119380
 	k8s.io/klog v0.3.1
+	k8s.io/sample-controller v0.0.0-20190808182125-a52d0d8c67c5
 )
 
 replace (
