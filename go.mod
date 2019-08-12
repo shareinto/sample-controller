@@ -3,14 +3,22 @@ module github.com/shareinto/sample-controller
 go 1.12
 
 require (
-	github.com/imdario/mergo v0.3.7 // indirect
-	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45 // indirect
-	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4 // indirect
-	google.golang.org/appengine v1.5.0 // indirect
-	k8s.io/api v0.0.0-20190809220925-3ab596449d6f
-	k8s.io/apimachinery v0.0.0-20190809020650-423f5d784010
-	k8s.io/client-go v11.0.0+incompatible
-	k8s.io/klog v0.4.0
-	k8s.io/sample-controller v0.0.0-20190808182125-a52d0d8c67c5
-	k8s.io/utils v0.0.0-20190809000727-6c36bc71fc4a // indirect
+	k8s.io/api v0.0.0-20190808180749-077ce48e77da
+	k8s.io/apimachinery v0.0.0-20190808180622-ac5d3b819fc6
+	k8s.io/client-go v0.0.0-20190808180953-396a06da3bd7
+	k8s.io/code-generator v0.0.0-20190808180452-d0071a119380
+	k8s.io/klog v0.3.1
+)
+
+replace (
+	golang.org/x/crypto => golang.org/x/crypto v0.0.0-20181025213731-e84da0312774
+	golang.org/x/net => golang.org/x/net v0.0.0-20190206173232-65e2d4e15006
+	golang.org/x/sync => golang.org/x/sync v0.0.0-20181108010431-42b317875d0f
+	golang.org/x/sys => golang.org/x/sys v0.0.0-20190209173611-3b5209105503
+	golang.org/x/text => golang.org/x/text v0.3.1-0.20181227161524-e6919f6577db
+	golang.org/x/tools => golang.org/x/tools v0.0.0-20190313210603-aa82965741a9
+	k8s.io/api => k8s.io/api v0.0.0-20190808180749-077ce48e77da
+	k8s.io/apimachinery => k8s.io/apimachinery v0.0.0-20190808180622-ac5d3b819fc6
+	k8s.io/client-go => k8s.io/client-go v0.0.0-20190808180953-396a06da3bd7
+	k8s.io/code-generator => k8s.io/code-generator v0.0.0-20190808180452-d0071a119380
 )
