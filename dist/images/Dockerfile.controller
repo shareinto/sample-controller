@@ -1,0 +1,5 @@
+FROM alpine
+
+COPY sample-controller /sample-controller
+WORKDIR /
+CMD ["./sample-controller"]
