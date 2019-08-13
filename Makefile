@@ -15,7 +15,7 @@ build-dev-images: build-bin
 	done
 
 build-go:
-	CGO_ENABLED=0 GOOS=linux go build -o $(PWD)/dist/images/controller -ldflags "-w -s" -v ./cmd/controller
+	CGO_ENABLED=0 GOOS=linux go build -o $(PWD)/dist/images/sample-controller -ldflags "-w -s" -v ./cmd/controller
 
 release: build-go
 	@for role in ${ROLES} ; do \
