@@ -27,6 +27,14 @@ lint:
 	@gofmt -d ${GOFILES_NOVENDOR} 
 	@gofmt -l ${GOFILES_NOVENDOR} | read && echo "Code differs from gofmt's style" 1>&2 && exit 1 || true
 	@GOOS=linux go vet ./...
-
+build-bin: lint
+	docker run --rm -e GOOS=linux -e GOCACHE=/tmp \
+		-u $(shell id -u):$(shell id -g) \
+		-v $(CURDIR):/go/src/github.com/shareinto/sample-controller:ro \
+		-v $(CURDIR)/dist:/go/src/github.com/shareinto/sample-controller/dist/ \
+		golang:$(GO_VERSION) /bin/bash -c '\
+		cd /go/src/github.com/shareinto/sample-controller && \
+		make test && \
+		make build-go '
 test:
 	GOOS=linux go test -cover -v ./...
