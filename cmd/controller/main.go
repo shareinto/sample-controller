@@ -30,7 +30,7 @@ import (
 	clientset "github.com/shareinto/sample-controller/pkg/generated/clientset/versioned"
 	informers "github.com/shareinto/sample-controller/pkg/generated/informers/externalversions"
 	"github.com/shareinto/sample-controller/pkg/signals"
-	controller "github.com/shareinto/sample-controller/pkg/controller"
+	"github.com/shareinto/sample-controller/pkg/controller"
 )
 
 var (
